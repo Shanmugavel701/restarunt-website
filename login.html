@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <script >
+        function validate()
+        {
+        var uname,pass;
+        uname = document.forms ["forms1"] ["uname"];
+        pass = document.forms ["forms1"] ["pass"];
+        
+        
+        if (uname.value == "")
+            {
+            alert("please enter username");
+            uname.focus()
+             return false
+            }
+        if ( pass.value== "")
+        {
+            alert("please enter password");
+            pass.focus()
+             return false
+            }
+        if( uname.value=="shanmu" && pass.value=="1234"){
+            alert("you are successfully loged-In")
+            return true
+        }
+        else{
+            alert("Invalid username or password")
+            return false;
+        }
+
+        }
+        
+    </script>
+
+    <style>
+        body{
+
+            background-image: url(/images/pexels-olga-lioncat-7245335.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .login{
+
+            background-color: aquamarine;
+            width: 250px;
+            margin-left: 40%;
+            margin-top:80px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .head{
+
+            font-size: 36px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            color:red;
+            border-bottom: 2px solid green;
+            width: fit-content;
+        }
+        .user{
+
+            margin-left: 80px;
+            font-weight: 600;
+            
+        }
+        .user1{
+
+            margin-left: 40px;
+            
+        }
+        .psd{
+
+            margin-left: 80px;
+            font-weight: 600;
+        }
+        .psd1{
+
+            margin-left: 40px;
+        }
+        .sub{
+
+            margin-left: 100px;
+            background-color: green;
+            color:white;
+            width: 70px;
+            height: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .fp{
+
+            margin-left: 80px;
+        }
+        .ns{
+            margin-left: 50px;
+        }
+        .rn{
+
+            text-decoration: none;
+            color:red;
+            padding-left: 4px;
+        }
+      input[type="text"],input[type="password"]{
+
+        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid red;
+      }
+    
+        
+    </style>
+    
+
+</head>
+<body>
+
+     
+    <form class="login" name="forms1" action="main.html" method="get" onsubmit=" return validate()">
+        <h2 class="head">Login Here</h2><br>
+        <label class="user">USERNAME</label>
+        <input class="user1"type="text" name="uname"><br><br>
+        <label class="psd">PASSWORD</label>
+        <input class="psd1" type="password" name="pass"><br><br>
+        <input class="sub" type="submit" value="login">
+        <p class="fp">Forget Password</p>
+        <p class="ns">New User ?<a href="#" class="rn">Register Now..!</a></p>
+
+    </form>
+    
+</body>
+</html>
